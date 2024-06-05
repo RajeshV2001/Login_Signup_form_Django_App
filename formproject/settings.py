@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-6&b45x$d)nlo4c7=1+f1*tfgxysa*a^at%vz%y23e1lp7fzwei
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1',os.environ.get('HOST')]
+ALLOWED_HOSTS = ['localhost','127.0.0.1','https://login-signup-form-django-app.onrender.com']
 
 
 # Application definition
