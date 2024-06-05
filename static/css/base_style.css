@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+
+.home {
+    background-color: #794597;
+    border-radius: 4px;
+}
+
+
+.login {
+    background-color: #4CAF50;
+    border-radius: 4px;
+}
+
+.signup {
+    background-color: #008CBA;
+    border-radius: 4px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: contents;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+    }
+    
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    .nav-links a{
+        color: white;
+        text-decoration: none;
+        padding: 13px;
+        display: block;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+
+    
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+    }
+    
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    .brand{
+        margin-right: 10px;
+    }
+
+}

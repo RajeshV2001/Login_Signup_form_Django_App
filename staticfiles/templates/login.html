@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="form_style.css">
+    <script src="form_script.js"></script>
+     
+</head>
+<body>
+
+    <main>
+    <form onsubmit="return validate()">
+
+      <div class="heading">
+          <h1>LOGIN</h1>
+      </div>
+
+        <div class="userinput">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="mail">
+        </div>
+
+        <div class="userinput">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="mypassword">
+        </div>
+
+        <div class="check">
+            <input type="checkbox" onclick="myFunction()">Show Password
+        </div>
+
+        <div class="btn">
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </div>
+
+      </form>
+
+</main>
+
+</body>
+
+</html>

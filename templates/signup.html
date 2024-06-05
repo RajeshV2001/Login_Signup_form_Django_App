@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Signup</title>{% endblock %}
+
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/form_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+    <script src="{% static 'js/form_script.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+
+    <main class="signup-main" >
+    <form onsubmit="return validate_signup()" method="POST" action="{% url 'signup' %}">
+    
+    {% csrf_token %}
+
+
+        <div class="heading">
+            <h1>SIGN UP</h1>
+        </div>
+
+        <div class="userinput">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="mail" name="mail">
+        </div>
+
+        <div class="userinput">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="text" class="form-control" id="mypassword" name="password">
+          
+          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="mypassword2" name="password2">
+        </div>
+
+        <div class="btn">
+            <button type="submit">Sign Up</button>
+            <button type="reset">Reset</button>
+        </div>
+
+      </form>
+
+    </main>
+
+
+{% endblock %}

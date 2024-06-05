@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Home</title>{% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+
+    
+  <nav class="navbar">
+    <div class="navbar-container">
+        <a href="{% url 'homepage' %}" class="brand">RAJESH</a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="{% url 'homepage' %}" class="home">Home</a></li>
+            <li><a href="{% url 'login' %}" class="login">Login</a></li>
+            <li><a href="{% url 'signup' %}" class="signup">Signup</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+{% block content %}
+
+<main class="login-main">
+    <h1>Form Project in Django</h1>
+</main>
+
+
+{% endblock %}
+
+    
+</body>
+</html>
