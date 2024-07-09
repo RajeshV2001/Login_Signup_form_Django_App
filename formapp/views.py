@@ -15,6 +15,7 @@ def signup(request):
         mail=request.POST.get('mail')
         pswd=request.POST.get('password')
         pswd2=request.POST.get('password2')
+        raw=r"^[a-zA-Z+0-9*]+@+[a-zA-Z]+\.[a-zA-Z]+"
         
         if mail=="" or pswd=="" or (pswd!=pswd2) or  not bool(re.match(raw,mail)):
             return render(request,"signup.html")
