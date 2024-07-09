@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import form_details
-
+import re
 # Create your views here.
 
 def index(request):
@@ -16,7 +16,7 @@ def signup(request):
         pswd=request.POST.get('password')
         pswd2=request.POST.get('password2')
         
-        if mail=="" or pswd=="" or (pswd!=pswd2):
+        if mail=="" or pswd=="" or (pswd!=pswd2) or  not bool(re.match(raw,mail)):
             return render(request,"signup.html")
         
         
