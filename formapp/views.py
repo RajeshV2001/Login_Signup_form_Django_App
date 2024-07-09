@@ -45,9 +45,9 @@ def login(request):
         
         mail=request.POST.get('mail')
         pswd=request.POST.get('password')
+        raw=r"^[a-zA-Z+0-9*]+@+[a-zA-Z]+\.[a-zA-Z]+"
         
-        
-        if mail=="" or pswd=="":
+        if mail=="" or pswd=="" or  not bool(re.match(raw,mail)) :
             return render(request,"login.html")
             
         
